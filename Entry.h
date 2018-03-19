@@ -13,9 +13,9 @@ class Entry {
       this->assoc_pages.swap(p);
     }
 
-    const std::string& getTitle() { return this->title; };
-    const std::string& getContent() { return this->content; };
-    const std::vector<std::string>& getAssociatedLorePages() { return this->assoc_pages; };
+    const std::string& getTitle() const { return this->title; };
+    const std::string& getContent() const { return this->content; };
+    const std::vector<std::string>& getAssociatedLorePages() const { return this->assoc_pages; };
 };
 
 #endif

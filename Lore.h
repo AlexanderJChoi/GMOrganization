@@ -30,7 +30,7 @@ class Lore {
       this->pages.emplace(name, page);
     };
     
-    LorePage* getPage(const std::string& name) {
+    LorePage* getPage(const std::string& name) const {
       LorePage* page = 0;
       try {
         page = this->pages.at(name);
@@ -43,9 +43,13 @@ class Lore {
     void removePage(const std::string& name) {
       this->lore_page_names.erase(std::remove(this->lore_page_names.begin(), this->lore_page_names.end(), name), this->lore_page_names.end());
       this->pages.erase(name);
-    }
+    };
 
-    const std::vector<std::string>& listPages() {
+    const std::string& getTitle() const { 
+      return this->title;
+    };
+
+    const std::vector<std::string>& listPages() const {
       return this->lore_page_names;
     };
 };

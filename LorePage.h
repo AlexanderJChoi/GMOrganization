@@ -35,8 +35,8 @@ class LorePage {
       }
     }
 
-    const std::string& getTitle() { return this->title; };
-    const std::vector<Entry* >& getEntries() { return this->entries; };
+    const std::string& getTitle() const { return this->title; };
+    const std::vector<Entry* >& getEntries() const { return this->entries; };
 };
 
 #endif
