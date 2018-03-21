@@ -23,7 +23,7 @@ bool LoreSave(const Lore& lore, const std::string& parentDir) {
     for(Entry* e : page->getEntries()) {
       outPage << e->getTitle() << '\n';
       outPage << e->getContent() << '\n';
-      for(std::string assoc : e->getAssociatedLorePages()) outPage << assoc << " ";
+      for(std::string assoc : e->getAssociatedLorePages()) outPage << assoc << ",";
       outPage << '\n';
     }
     outPage.close();
