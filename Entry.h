@@ -4,6 +4,9 @@
 #include <string>
 #include <vector>
 
+/**
+ * Entry is an immutable class 
+ **/
 class Entry {
   private:
     std::string title, content;
